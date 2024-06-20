@@ -1,17 +1,36 @@
 package vascopanigi.u5_w1_d4.entities;
 
+import jakarta.persistence.*;
+import jakarta.persistence.Table;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
 import java.util.List;
+import java.util.UUID;
 
 @Getter
 @Setter
 @ToString
-
+@NoArgsConstructor
+@Entity
+@Table(name = "pizzas")
 public class Pizza extends Product {
-    private List<Topping> toppings;
+    @Id
+    @GeneratedValue
+    private UUID id;
+
+//    @OneToMany(mappedBy = "topping", cascade = CascadeType.ALL)
+//    private List<Topping> toppings;
+@ManyToMany(cascade = CascadeType.ALL)
+@JoinTable(
+        name = "pizza_toppings",
+        joinColumns = @JoinColumn(name = "pizza_id"),
+        inverseJoinColumns = @JoinColumn(name = "topping_id")
+)
+private List<Topping> toppings;
+
 
     public Pizza(String name, List<Topping> toppings) {
         super(500, 4.99, name);
