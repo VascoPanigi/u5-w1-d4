@@ -14,7 +14,7 @@ import java.util.List;
 public class Config {
 
     @Bean(name = "cheese")
-    public Topping getCheese() {
+    public static Topping getCheese() {
         return new Topping("cheese", 1.00, 150);
     }
 
@@ -24,7 +24,7 @@ public class Config {
     }
 
     @Bean(name = "pineapple")
-    public Topping getPineapple() {
+    public static Topping getPineapple() {
         return new Topping("pineapple", 30.00, 200);
     }
 

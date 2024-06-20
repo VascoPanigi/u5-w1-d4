@@ -17,9 +17,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @Table(name = "toppings")
 public class Topping extends Product {
-    @Id
-    @GeneratedValue
-    private UUID id;
+
 
 //    @ManyToOne
 //    @JoinColumn(name="topping_id")

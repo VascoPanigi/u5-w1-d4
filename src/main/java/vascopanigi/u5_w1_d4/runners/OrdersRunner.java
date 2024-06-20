@@ -1,9 +1,10 @@
-package vascopanigi.u5_w1_d4;
+package vascopanigi.u5_w1_d4.runners;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Component;
+import vascopanigi.u5_w1_d4.Config;
 import vascopanigi.u5_w1_d4.entities.*;
 
 @Component

@@ -17,9 +17,7 @@ import java.util.UUID;
 @Entity
 @Table(name = "pizzas")
 public class Pizza extends Product {
-    @Id
-    @GeneratedValue
-    private UUID id;
+
 
 //    @OneToMany(mappedBy = "topping", cascade = CascadeType.ALL)
 //    private List<Topping> toppings;
